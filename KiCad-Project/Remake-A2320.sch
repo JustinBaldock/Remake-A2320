@@ -1,4 +1,475 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C113
+U 1 1 5DD1E27E
+P 2250 1600
+F 0 "C113" H 2365 1646 50  0000 L CNN
+F 1 "0.1uF" H 2365 1555 50  0000 L CNN
+F 2 "" H 2288 1450 50  0001 C CNN
+F 3 "~" H 2250 1600 50  0001 C CNN
+	1    2250 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C114
+U 1 1 5DD34A47
+P 3000 1600
+F 0 "C114" H 3115 1646 50  0000 L CNN
+F 1 "10uF" H 3115 1555 50  0000 L CNN
+F 2 "" H 3038 1450 50  0001 C CNN
+F 3 "~" H 3000 1600 50  0001 C CNN
+	1    3000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead FB104
+U 1 1 5DD36395
+P 2700 1450
+F 0 "FB104" V 2426 1450 50  0000 C CNN
+F 1 "2-1" V 2517 1450 50  0000 C CNN
+F 2 "" V 2630 1450 50  0001 C CNN
+F 3 "~" H 2700 1450 50  0001 C CNN
+	1    2700 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 1750 3000 1750
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DD383C6
+P 3000 1800
+F 0 "#PWR?" H 3000 1550 50  0001 C CNN
+F 1 "GNDREF" H 3005 1627 50  0000 C CNN
+F 2 "" H 3000 1800 50  0001 C CNN
+F 3 "" H 3000 1800 50  0001 C CNN
+	1    3000 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1750 3000 1800
+Connection ~ 3000 1750
+Wire Wire Line
+	2550 1450 2250 1450
+Wire Wire Line
+	2850 1450 3000 1450
+$Comp
+L AMIGA-CONN:A2000_Video_Slot_Logical J?
+U 1 1 5DD59A67
+P 1550 2750
+F 0 "J?" H 1223 4848 50  0000 C CNN
+F 1 "A2000_Video_Slot_Logical" H 1223 4757 50  0000 C CNN
+F 2 "" H 1650 350 50  0001 C CNN
+F 3 "" H 1650 350 50  0001 C CNN
+	1    1550 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1450 1800 1450
+Connection ~ 2250 1450
+Wire Wire Line
+	1800 1450 1800 1650
+Wire Wire Line
+	1800 1650 1550 1650
+Connection ~ 1800 1450
+Wire Wire Line
+	1800 1450 1550 1450
+Wire Wire Line
+	1550 1750 1800 1750
+Connection ~ 2250 1750
+Wire Wire Line
+	1550 2050 1800 2050
+Wire Wire Line
+	1800 2050 1800 1750
+Connection ~ 1800 1750
+Wire Wire Line
+	1800 1750 2250 1750
+Wire Wire Line
+	1550 2150 1800 2150
+Wire Wire Line
+	1800 2150 1800 2050
+Connection ~ 1800 2050
+Wire Wire Line
+	1550 2550 1800 2550
+Wire Wire Line
+	1800 2550 1800 2150
+Connection ~ 1800 2150
+Wire Wire Line
+	1550 2850 1800 2850
+Wire Wire Line
+	1800 2850 1800 2550
+Connection ~ 1800 2550
+Wire Wire Line
+	1550 2950 1800 2950
+Wire Wire Line
+	1800 2950 1800 2850
+Connection ~ 1800 2850
+Wire Wire Line
+	1550 3250 1800 3250
+Wire Wire Line
+	1800 3250 1800 2950
+Connection ~ 1800 2950
+Wire Wire Line
+	1550 4050 1800 4050
+Wire Wire Line
+	1800 4050 1800 3250
+Connection ~ 1800 3250
+Wire Wire Line
+	1550 4700 1800 4700
+Wire Wire Line
+	1800 4700 1800 4050
+Connection ~ 1800 4050
+Wire Wire Line
+	1550 5100 1800 5100
+Wire Wire Line
+	1800 5100 1800 4700
+Connection ~ 1800 4700
+Wire Wire Line
+	1550 5500 1800 5500
+Wire Wire Line
+	1800 5500 1800 5100
+Connection ~ 1800 5100
+Wire Wire Line
+	1550 5800 1800 5800
+Wire Wire Line
+	1800 5800 1800 5500
+Connection ~ 1800 5500
+Wire Wire Line
+	1550 6800 1800 6800
+Wire Wire Line
+	1800 6800 1800 5800
+Connection ~ 1800 5800
+Wire Wire Line
+	1550 7800 1800 7800
+Wire Wire Line
+	1800 7800 1800 6800
+Connection ~ 1800 6800
+Text GLabel 3750 2250 2    50   Input ~ 0
+_CSYNC
+Wire Wire Line
+	3750 2250 1550 2250
+Text GLabel 3750 3050 2    50   Input ~ 0
+_HSYNC
+Wire Wire Line
+	3750 3050 1550 3050
+Text GLabel 3750 3450 2    50   Input ~ 0
+_VSYNC
+Wire Wire Line
+	3750 3450 1550 3450
+$Comp
+L amiga-component:Resistor-SIP RP101
+U 1 1 5DD84A30
+P 2500 4350
+F 0 "RP101" H 2500 4515 50  0000 C CNN
+F 1 "Resistor-SIP-180-Ohm" H 2500 4424 50  0000 C CNN
+F 2 "" H 2600 3900 50  0001 C CNN
+F 3 "" H 2600 3900 50  0001 C CNN
+	1    2500 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4450 3000 4450
+Wire Wire Line
+	2700 4600 3000 4600
+Wire Wire Line
+	2700 4750 3000 4750
+Wire Wire Line
+	2700 4900 3000 4900
+Entry Wire Line
+	3000 4750 3100 4650
+Entry Wire Line
+	3000 4600 3100 4500
+Entry Wire Line
+	3000 4450 3100 4350
+Entry Wire Line
+	3000 4900 3100 4800
+Text GLabel 4700 4350 2    50   BiDi ~ 0
+RED(3:0)
+Text Label 3000 4400 0    50   ~ 0
+0
+Text Label 3000 4550 0    50   ~ 0
+1
+Text Label 3000 4700 0    50   ~ 0
+2
+Text Label 3000 4850 0    50   ~ 0
+3
+$Comp
+L amiga-component:Resistor-SIP RP102
+U 1 1 5DD94D69
+P 3600 5000
+F 0 "RP102" H 3600 5165 50  0000 C CNN
+F 1 "Resistor-SIP" H 3600 5074 50  0000 C CNN
+F 2 "" H 3700 4550 50  0001 C CNN
+F 3 "" H 3700 4550 50  0001 C CNN
+	1    3600 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 5200 1900 5200
+Wire Wire Line
+	1550 4800 1900 4800
+Wire Wire Line
+	1900 4800 1900 4450
+Wire Wire Line
+	1900 4450 2300 4450
+Wire Wire Line
+	1550 4900 1950 4900
+Wire Wire Line
+	1950 4900 1950 4600
+Wire Wire Line
+	1950 4600 2300 4600
+Wire Wire Line
+	2300 4750 2000 4750
+Wire Wire Line
+	2000 4750 2000 5000
+Wire Wire Line
+	2000 5000 1550 5000
+Wire Wire Line
+	2300 4900 2050 4900
+Wire Wire Line
+	2050 4900 2050 3750
+Wire Wire Line
+	2050 3750 1550 3750
+Wire Wire Line
+	3400 5100 1900 5100
+Wire Wire Line
+	1900 5100 1900 5200
+Wire Wire Line
+	3400 5250 1950 5250
+Wire Wire Line
+	1950 5250 1950 5300
+Wire Wire Line
+	1950 5300 1550 5300
+Wire Wire Line
+	3400 5400 1550 5400
+Wire Wire Line
+	1550 3550 2100 3550
+Wire Wire Line
+	2100 3550 2100 5550
+Wire Wire Line
+	2100 5550 3400 5550
+Wire Wire Line
+	3800 5100 4000 5100
+Wire Wire Line
+	3800 5250 4000 5250
+Wire Wire Line
+	3800 5400 4000 5400
+Wire Wire Line
+	3800 5550 4000 5550
+Entry Wire Line
+	4000 5100 4100 5000
+Entry Wire Line
+	4000 5250 4100 5150
+Entry Wire Line
+	4000 5400 4100 5300
+Entry Wire Line
+	4000 5550 4100 5450
+Wire Bus Line
+	4100 5000 4700 5000
+Wire Bus Line
+	3100 4350 4700 4350
+Text GLabel 4700 5000 2    50   BiDi ~ 0
+Green(3:0)
+Text Label 4000 5050 0    50   ~ 0
+0
+Text Label 4000 5200 0    50   ~ 0
+1
+Text Label 4000 5350 0    50   ~ 0
+2
+Text Label 4000 5500 0    50   ~ 0
+3
+$Comp
+L amiga-component:Resistor-SIP RP103
+U 1 1 5DDC073A
+P 2500 5800
+F 0 "RP103" H 2500 5965 50  0000 C CNN
+F 1 "Resistor-SIP" H 2500 5874 50  0000 C CNN
+F 2 "" H 2600 5350 50  0001 C CNN
+F 3 "" H 2600 5350 50  0001 C CNN
+	1    2500 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 3350 2150 3350
+Wire Wire Line
+	2150 3350 2150 6350
+Wire Wire Line
+	2150 6350 2300 6350
+Wire Wire Line
+	1550 3150 2200 3150
+Wire Wire Line
+	2200 3150 2200 5900
+Wire Wire Line
+	2200 5900 2300 5900
+Wire Wire Line
+	1550 5600 1900 5600
+Wire Wire Line
+	1900 5600 1900 6050
+Wire Wire Line
+	1900 6050 2300 6050
+Wire Wire Line
+	1550 5700 1950 5700
+Wire Wire Line
+	1950 5700 1950 6200
+Wire Wire Line
+	1950 6200 2300 6200
+Wire Wire Line
+	2700 5900 3000 5900
+Wire Wire Line
+	2700 6050 3000 6050
+Wire Wire Line
+	2700 6200 3000 6200
+Wire Wire Line
+	2700 6350 3000 6350
+Entry Wire Line
+	3000 5900 3100 5800
+Entry Wire Line
+	3000 6050 3100 5950
+Entry Wire Line
+	3000 6200 3100 6100
+Entry Wire Line
+	3000 6350 3100 6250
+Wire Bus Line
+	3100 5800 4700 5800
+Text Label 3000 5850 0    50   ~ 0
+0
+Text Label 3000 6000 0    50   ~ 0
+1
+Text Label 3000 6150 0    50   ~ 0
+2
+Text Label 3000 6300 0    50   ~ 0
+3
+Text GLabel 4700 5800 2    50   BiDi ~ 0
+Blue(3:0)
+$Comp
+L power:VCC #PWR?
+U 1 1 5DDD5520
+P 3000 1300
+F 0 "#PWR?" H 3000 1150 50  0001 C CNN
+F 1 "VCC" H 3017 1473 50  0000 C CNN
+F 2 "" H 3000 1300 50  0001 C CNN
+F 3 "" H 3000 1300 50  0001 C CNN
+	1    3000 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1450 3000 1300
+Connection ~ 3000 1450
+$Comp
+L Device:Ferrite_Bead FB101
+U 1 1 5DDD80E7
+P 2950 7300
+F 0 "FB101" V 2676 7300 50  0000 C CNN
+F 1 "2-1" V 2767 7300 50  0000 C CNN
+F 2 "" V 2880 7300 50  0001 C CNN
+F 3 "~" H 2950 7300 50  0001 C CNN
+	1    2950 7300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C117
+U 1 1 5DDD9B04
+P 3250 7450
+F 0 "C117" H 3365 7496 50  0000 L CNN
+F 1 "100pF" H 3365 7405 50  0000 L CNN
+F 2 "" H 3288 7300 50  0001 C CNN
+F 3 "~" H 3250 7450 50  0001 C CNN
+	1    3250 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 7300 3250 7300
+Connection ~ 3250 7300
+$Comp
+L Device:R R107
+U 1 1 5DDDD353
+P 3250 7050
+F 0 "R107" H 3320 7096 50  0000 L CNN
+F 1 "3.3k" H 3320 7005 50  0000 L CNN
+F 2 "" V 3180 7050 50  0001 C CNN
+F 3 "~" H 3250 7050 50  0001 C CNN
+	1    3250 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 7200 3250 7300
+$Comp
+L power:VCC #PWR?
+U 1 1 5DDDFDFA
+P 3250 6800
+F 0 "#PWR?" H 3250 6650 50  0001 C CNN
+F 1 "VCC" H 3267 6973 50  0000 C CNN
+F 2 "" H 3250 6800 50  0001 C CNN
+F 3 "" H 3250 6800 50  0001 C CNN
+	1    3250 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 6800 3250 6900
+Wire Wire Line
+	1550 4250 1850 4250
+Wire Wire Line
+	1850 4250 1850 7300
+Wire Wire Line
+	1850 7300 2800 7300
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DDEC6F2
+P 3250 7700
+F 0 "#PWR?" H 3250 7450 50  0001 C CNN
+F 1 "GNDREF" H 3255 7527 50  0000 C CNN
+F 2 "" H 3250 7700 50  0001 C CNN
+F 3 "" H 3250 7700 50  0001 C CNN
+	1    3250 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 7600 3250 7700
+Wire Wire Line
+	3250 7300 4400 7300
+Text Label 3450 7250 0    50   ~ 0
+_C1
+$Comp
+L 74xx:74HC04 U1
+U 1 1 5DDF58ED
+P 4700 7300
+F 0 "U1" H 4700 7617 50  0000 C CNN
+F 1 "74HC04" H 4700 7526 50  0000 C CNN
+F 2 "" H 4700 7300 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 4700 7300 50  0001 C CNN
+	1    4700 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R111
+U 1 1 5DDF7EDE
+P 5300 7300
+F 0 "R111" V 5093 7300 50  0000 C CNN
+F 1 "1K" V 5184 7300 50  0000 C CNN
+F 2 "" V 5230 7300 50  0001 C CNN
+F 3 "~" H 5300 7300 50  0001 C CNN
+	1    5300 7300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 7300 5000 7300
+Wire Bus Line
+	3100 4350 3100 4800
+Wire Bus Line
+	4100 5000 4100 5450
+Wire Bus Line
+	3100 5800 3100 6250
 $EndSCHEMATC
